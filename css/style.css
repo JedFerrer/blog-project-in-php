@@ -1,0 +1,120 @@
+.pad-twenty {
+	padding-top: 13px;
+}
+.clear {
+	clear: both;
+}
+
+
+.header-container {
+	background: #f1f1f1;
+	min-height: 100px;
+	min-width: 1180px;
+}
+
+.content-container {
+	min-width: 1180px;
+
+}
+
+.main-content-centered {
+	width: 960px;
+	margin: auto;
+}
+
+.form-fit-container {
+	width: 400px;
+	margin: auto;
+	padding: 42.5px 0;
+	font-family:  'Open Sans',sans-serif;
+	color: #5a5a5a;
+}
+
+.form-fit-container h2 {
+	margin: 0 auto;
+}
+.form-fit-container .required {
+	color: red;
+}
+
+/*******Login Page*******/
+
+
+.form-container {
+	width: 700px;
+	background: red;
+	margin: 60px auto;
+	background: #f6f6f6;
+	border-radius:10px;
+}
+.form-container .sign-up {
+	padding-left: 5px;
+}
+.form-container form {
+	width: 400px;
+	padding: 32px 30px 61px 30px;	
+	margin: auto;
+}
+
+.form-header-top-container {
+	/*background: #28b7ed;*/
+	text-align: center;
+	margin-bottom: 20px;
+}
+.form-header-top-container h3 {
+	padding: 8px;
+	/*color: #fff;*/
+}
+.logo-container {
+	float: left;
+	min-width: 300px;
+	padding: 20px 0;
+}
+.logo-container h2 {
+	margin: 20px 0;
+}
+.link-top-container{
+	float: right;
+	min-width: 100px;
+	padding: 46px 0;
+}
+.link-top-container a {
+	padding: 46px 0;
+}
+.footer-container {
+	min-height: 40px;
+	background: #37332c;
+}
+.footer-container .main-content-centered {
+	text-align: center;
+}
+.footer-container .main-content-centered h6 {
+	padding: 24.5px 0;
+	margin: 0 auto;
+	color: #bababa;
+	letter-spacing: .5px;
+}
+
+
+.validation-errors {
+	padding: 20px 20px 10px;
+	margin-bottom: 20px;
+}
+
+.blog-container {
+	min-height: 500px;
+	background: #f1f1f1;
+	margin: 20px 0;
+}
+
+.blog-container h4, .blog-container p  {
+	margin: 0;
+}
+
+.entries-container {
+	width: 400px;
+	height: 180px;
+	padding: 20px;
+	background: orange;
+}
+
