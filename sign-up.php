@@ -163,19 +163,19 @@
 
                          <div class="form-group">
                             <label for="yourName">Name<span class="required">*</span>:</label>
-                            <input type="text" name="name" class="form-control" id="yourName" value="<?php echo $nameValue; ?>" placeholder="Enter your Name" maxlength="50" >
+                            <input type="text" name="name" class="form-control" id="yourName" value="<?php echo $nameValue; ?>" placeholder="Enter your Name" maxlength="50" required>
                          </div>
                          <div class="form-group">
                             <label for="exampleInputEmail1">Email address<span class="required">*</span>:</label>
-                            <input type="text" name="email" class="form-control" id="exampleInputEmail1" value="<?php echo $emailValue; ?>" placeholder="Enter your Email" maxlength="50" >
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" value="<?php echo $emailValue; ?>" placeholder="Enter your Email" maxlength="50" required>
                          </div>
                          <div class="form-group">
                             <label for="exampleInputPassword1">Password<span class="required">*</span>:</label>
-                            <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Password" maxlength="50" >
+                            <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Password" maxlength="50" required>
                          </div>
                           <div class="form-group">
                             <label for="repeatPassword">Re-enter Password<span class="required">*</span>:</label>
-                            <input type="password" name="rpass" class="form-control" id="repeatPassword" placeholder="Repeat Password" maxlength="50" >
+                            <input type="password" name="rpass" class="form-control" id="repeatPassword" placeholder="Repeat Password" maxlength="50" required>
                          </div>
                          
                          <button type="submit" class="btn btn-primary btn-block">Sign Up</button>

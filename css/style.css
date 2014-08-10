@@ -112,9 +112,33 @@
 }
 
 .entries-container {
-	width: 400px;
-	height: 180px;
-	padding: 20px;
-	background: orange;
+	width: 100%;
+	min-height: 20px;
+	padding: 10px;
+	/*background: orange;*/
+	padding-bottom: 20px;
+}
+
+.entries-container .title-date-container h4 {
+	padding-bottom: 15px;
+
+}
+
+
+.textbox-wrapper {
+	/*background: red;*/
+	width: 700px;
+	margin: auto;
+	padding: 30px 0;
+}
+.blog-container textarea {
+	resize: none;
+}
+
+.blog-container .inputbox {
+	margin-top: 15px;
+	width: 270px;
+	height: 25px;
+	letter-spacing: 1px;
 }
 
