@@ -1,27 +1,35 @@
 <?php session_start(); include_once('db-connection.php'); ?>
 <?php
 	//Reset Vars
-	$titleErr = $messageErr = $titleValue = $messageValue = '';
+	$titleErr = $messageErr = $titleValue = $contentValue = '';
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
 		if (empty($_POST["title"])) {
-	        $titleErr = 'Name is required';
+	        $titleErr = 'Title is required';
 		} else {
 			$title = ($_POST["title"]);
 			$title = mysql_real_escape_string($title);
 			$titleValue = $title;
+			unset($_SESSION['title_Err_Add']);
 		}
 
 		if (empty($_POST["message"])) {
-			$messageErr = 'Email is required';
+			$messageErr = 'Post Content is required';
 		} else {
 			$message = ($_POST["message"]);
 			$message = mysql_real_escape_string($message);
-			$messageValue = $message;
+			$contentValue = $message;
+			unset($_SESSION['message_Err_Add']);
 		}
 
 		if ($titleErr != '' or $messageErr != '') {
-			//
+			$_SESSION['title_Err_Add'] = $titleErr;
+			$_SESSION['message_Err_Add'] = $messageErr;
+
+			$_SESSION['post_title_add'] = $titleValue;
+			$_SESSION['post_content_add'] = $contentValue;
+			header("location:blog-home.php");
 		} else {
 			$author_id = $_SESSION['author_id'];
 			$excerpt = implode(' ', array_slice(explode(' ', $message), 0, 50));
@@ -31,9 +39,9 @@
               die('Error: ' . mysqli_error($con));
             }
 
-            $successful = 'Your Post has been Added';
-            //reset
-            $titleValue = $messageValue = '';
+            //
+           
+
             header("location:blog-home.php");
             mysqli_close($con);
 		}

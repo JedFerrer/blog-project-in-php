@@ -1,3 +1,13 @@
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+.structure-container {
+	min-height:100%;
+    position:relative;
+}
 .pad-twenty {
 	padding-top: 13px;
 }
@@ -14,7 +24,8 @@
 
 .content-container {
 	min-width: 1180px;
-
+	position: relative;
+	padding-bottom: 60px; 
 }
 
 .main-content-centered {
@@ -43,8 +54,8 @@
 .form-container {
 	width: 700px;
 	background: red;
-	margin: 60px auto;
-	background: #f6f6f6;
+	margin: 100px auto;
+	background: #f1f1f1;
 	border-radius:10px;
 }
 .form-container .sign-up {
@@ -52,7 +63,7 @@
 }
 .form-container form {
 	width: 400px;
-	padding: 32px 30px 61px 30px;	
+	padding: 45px 30px 61px 30px;	
 	margin: auto;
 }
 
@@ -82,8 +93,14 @@
 	padding: 46px 0;
 }
 .footer-container {
+	/*padding-top: 20px;*/
 	min-height: 40px;
-	background: #37332c;
+	background: #282828;
+	position: absolute;
+	bottom: 0;
+	min-width: 1180px;
+	width: 100%;
+
 }
 .footer-container .main-content-centered {
 	text-align: center;
@@ -91,8 +108,13 @@
 .footer-container .main-content-centered h6 {
 	padding: 24.5px 0;
 	margin: 0 auto;
-	color: #bababa;
+	color: #9d9d9d;
 	letter-spacing: .5px;
+	font-size: 12px;
+	font-weight: 400;
+	font-family: 'Raleway', sans-serif;
+
+
 }
 
 
@@ -102,7 +124,7 @@
 }
 
 .blog-container {
-	min-height: 500px;
+	min-height: 600px;
 	background: #f1f1f1;
 	margin: 20px 0;
 }
@@ -119,9 +141,36 @@
 	padding-bottom: 20px;
 }
 
-.entries-container .title-date-container h4 {
-	padding-bottom: 15px;
+.entries-container .title-date-container h5 {
+	color: rgba(0,0,0,0.6);
+}
+.entries-container .title-date-container h2 {
+	margin-top: 0;
+	text-decoration: none;
+	font-size: 3.5rem;
+	line-height: 1.2em;
+	letter-spacing: -1px;
+}
 
+.entries-container .title-date-container a {
+	color: #444444;
+}
+
+.entries-container .title-date-container a:hover {
+	color: #428bca;
+	text-decoration: none;
+	transition: color ease 0.3s;
+}
+
+.post-content-container p {
+	color: rgba(0,0,0,0.6);
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+.devider {
+/*	text-align: left;*/
+	border-top: 1px solid rgba(0,0,0,0.15);
+	margin-top: 35px;
 }
 
 
@@ -141,4 +190,27 @@
 	height: 25px;
 	letter-spacing: 1px;
 }
+
+.page-number {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.3rem;
+	color: rgba(0,0,0,0.6);
+	text-align: center;
+}
+
+
+
+.entries-container .title-date-container .singles-title {
+	font-size: 4.5rem;
+}
+
+.post-content-container .singles-post-content {
+	font-size: 1.7rem;
+	line-height: 30px;
+	color: #000;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+
 

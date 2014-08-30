@@ -1,31 +1,15 @@
-<!DOCTYPE html>
-<?php session_start(); ?>
-<html>
-	<head>
-		<title>Login Form</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-		<link href="js/bootstrap.min.js" rel="stylesheet" media="screen">
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-		<!--[if IE]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-
-		<!-- Main Stylesheet File -->
-		<link href="css/style.css" rel="stylesheet" media="screen">
-	</head>
-
-	<body>
+<!-- Header -->
+<?php include_once('partials\header.php'); ?>
+		<?php
+			if(isset($_SESSION['myemail'])) {
+				header("location:blog-home.php");
+			}
+		?>
+<!-- 	<body> -->
 		<?php
 			// if(isset($_SESSION["name"])) {
 
-			include_once('db-connection.php');
+			//include_once('db-connection.php');
 			//reset Var
 			$emailErr = $passwordErr = $emailValue = $loginErr = '';
 
@@ -53,8 +37,8 @@
 					$run_sql_query = mysqli_query($con, $sql);
 					$name = $author_id = '';
 					while($row = mysqli_fetch_array($run_sql_query)) {
-					  $name = $row['author_name'];
-					  $author_id = $row['id'];
+					    $name = $row['author_name'];
+					    $author_id = $row['id'];
 					}
 
                     $data_exist = mysqli_num_rows($run_sql_query);
@@ -80,7 +64,7 @@
 
 
 		?>
-		<div class="header-container">
+		<!-- <div class="header-container">
 			<div class="main-content-centered">
 				
 				<div class="logo-container">
@@ -92,7 +76,7 @@
 				<div class="clear"></div>
 
 			</div>
-		</div>
+		</div> -->
 
 		<div class="content-container">
 			<div class="main-content-centered">
@@ -141,6 +125,8 @@
 						 	<div class="alert alert-success alert-dismissible" role="alert">Example block-level help text here.</div>
 						 </div> -->
 						 <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+						 </br>
+						 <?php echo '<a href="sign-up.php" class="sign-up">Sign Up</a>'; ?>
 						 
 					</form>
 				</div>
@@ -148,16 +134,5 @@
 			</div>
 		</div>
 
-		<div class="footer-container">
-			<div class="main-content-centered">
-				<h6>&copy; 2014 Copyright JEDIDIAH Blog | Powered by Mayon Volcano Software Ltd.</h6>
-			</div>
-		</div>
-
-		 <?php
-            // } else {
-            //     header("location:blog-home.php");
-            // }   
-        ?>
-	</body>
-</html>
+	<!-- footer -->
+<?php include_once('partials\footer.php'); ?>
